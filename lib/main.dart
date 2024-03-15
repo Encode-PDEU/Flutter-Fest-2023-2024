@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:workshopapp/Home.dart';
 import 'counter.dart';
 void main() {
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return Sizer(builder: (context,orientation,deviceType){
+      return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       home: Home(),
     );
+    });
+    
   }
 }
      
